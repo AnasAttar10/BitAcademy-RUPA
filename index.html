@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+
+    <div class="container">	
+        <div class="user-container"></div>	
+        <div class="quote-container"></div>	
+        <div class="content-container">	
+            <div class="pokemon-container"></div>	
+            <div class="meat-container"></div>	
+        </div>	
+        <div class="friends">	
+            <h4>Friends</h4>	
+            <div class="friends-container"></div>	
+        </div>	
+        <div class="buttons">	
+            <button id="save">Load User Data</button>	
+            <button id="display">Display User</button>
+            <button id="saveInLocalStorage">Save User Page</button>	
+            <button id="displayfromLocalStorage">Load User Page</button>	
+        </div>	
+    </div>
+
+
+    <script id="handlebars-demo1" type="text/x-handlebars-template">
+        <img id="profile-pic" src={{picture}} alt="Hi">
+            <span class="user-info">{{firstName}}</span>
+            <span class="user-info">{{lastName}}</span>
+        <div>
+            <span class="user-info">{{city}} ,</span>
+            <span class="user-info">{{state}}</span>
+        </div>
+     </script>
+
+     <script id="handlebars-demo2" type="text/x-handlebars-template">
+        <p>Favorite quote : </p>
+            {{quote}}
+     </script>
+
+     <script id="handlebars-demo3" type="text/x-handlebars-template">
+        <img src="{{sprites}}" alt="pokemon-image" id="pokemon-image">
+        <p class ="pokemon-text" id="pokemon-text">Favorite Pokemon : </p>
+     </script>
+
+     <script id="handlebars-demo6" type="text/x-handlebars-template">
+         {{pokiName}}
+     </script>
+
+     <script id="handlebars-demo4" type="text/x-handlebars-template">
+            {{text}}
+     </script>
+
+     <script id="handlebars-demo5" type="text/x-handlebars-template">
+        <ul>
+            {{#each friends}}
+                <li>{{this.firstName}} {{this.lastName}}</li>
+            {{/each}}
+        </ul>
+     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
